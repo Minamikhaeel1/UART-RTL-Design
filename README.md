@@ -7,21 +7,21 @@ The system is highly configurable, supporting dynamic parity generation/checking
 
 ## Key Features
 * **Full-Duplex Communication:** Supports simultaneous, bidirectional serial data transmission and reception.
-* The receiver is highly optimized to handle consecutive incoming frames continuously without requiring any inter-frame gaps.
+The receiver is highly optimized to handle consecutive incoming frames continuously without requiring any inter-frame gaps.
 <img width="1203" height="107" alt="{F7BB54DB-AD44-4C49-A935-4E15334D73B6}" src="https://github.com/user-attachments/assets/4a370a4e-07a4-499e-bb7d-32100ed0c82a" />
 
 * **Configurable Parity:** Configurable frame construction consisting of 1 start bit (low), 8 data bits, an optional parity bit, and 1 stop bit (high).
-* Parity is fully dynamic and controlled via `PAR_EN` (enable/disable) and `PAR_TYP` (Even/Odd) configuration signals.
+Parity is fully dynamic and controlled via `PAR_EN` (enable/disable) and `PAR_TYP` (Even/Odd) configuration signals.
 <img width="918" height="186" alt="{67135C37-225D-4C94-ADDC-247FA799D604}" src="https://github.com/user-attachments/assets/b762bb14-4100-4651-8b53-21ce1a55ae34" />
 
 
 * **Robust Receiver:** Enhances data recovery in noisy environments by sampling incoming data at the exact middle of the bit period.
-* Supports multiple oversampling ratios (8x, 16x, 32x) via the `Prescale` input. For a standard 115.2 KHz transmission baud rate, the receiver can accurately operate at clock speeds of 921.6 KHz, 1.843 MHz, or 3.686 MHz.
+Supports multiple oversampling ratios (8x, 16x, 32x) via the `Prescale` input. For a standard 115.2 KHz transmission baud rate, the receiver can accurately operate at clock speeds of 921.6 KHz, 1.843 MHz, or 3.686 MHz.
 <img width="681" height="793" alt="{8A930F5F-7BCE-440E-9087-234DFA4A3123}" src="https://github.com/user-attachments/assets/25d8bdac-c19c-4966-9d9f-7b2649030689" />
 
 
 * **Error Detection:** Built-in hardware flags for immediate corruption identification.
-* The `Parity_Error` flag asserts upon a mismatch between calculated and received parity bits, while the `Stop_Error` flag asserts if the frame lacks a valid stop bit.
+The `Parity_Error` flag asserts upon a mismatch between calculated and received parity bits, while the `Stop_Error` flag asserts if the frame lacks a valid stop bit.
 
 * **Synchronous Design:** The design utilizes a fully synchronous clocking scheme combined with an asynchronous active-low reset to guarantee safe and predictable system initialization.
 
