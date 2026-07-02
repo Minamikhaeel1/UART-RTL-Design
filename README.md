@@ -24,6 +24,7 @@ Supports multiple oversampling ratios (8x, 16x, 32x) via the `Prescale` input. F
 
 <br>
 <br>
+
 * **Error Detection:** Built-in hardware flags for immediate corruption identification.
 The `Parity_Error` flag asserts upon a mismatch between calculated and received parity bits, while the `Stop_Error` flag asserts if the frame lacks a valid stop bit.
 
