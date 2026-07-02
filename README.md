@@ -17,7 +17,7 @@ Parity is fully dynamic and controlled via `PAR_EN` (enable/disable) and `PAR_TY
 
 * **Robust Receiver:** Enhances data recovery in noisy environments by sampling incoming data at the exact middle of the bit period.
 Supports multiple oversampling ratios (8x, 16x, 32x) via the `Prescale` input. For a standard 115.2 KHz transmission baud rate, the receiver can accurately operate at clock speeds of 921.6 KHz, 1.843 MHz, or 3.686 MHz.
-<img width="681" height="793" alt="{8A930F5F-7BCE-440E-9087-234DFA4A3123}" src="https://github.com/user-attachments/assets/25d8bdac-c19c-4966-9d9f-7b2649030689" />
+<img width="851" height="803" alt="{3C570E3E-8A47-4ECE-8B88-3EE084AF00CF}" src="https://github.com/user-attachments/assets/65a8af70-e043-4b40-a02a-fe4d6c684d59" />
 
 
 * **Error Detection:** Built-in hardware flags for immediate corruption identification.
@@ -47,5 +47,15 @@ Responsible for detecting incoming frames, oversampling the serial stream, check
 * **Data Integrity:** Only asserts the output `data_valid` signal if the frame is received correctly without any parity or stop bit errors.
 <img width="856" height="515" alt="{76D52DC5-3550-4764-9093-BE79BEBD5953}" src="https://github.com/user-attachments/assets/ba7f360f-e7a2-42f4-8553-22584ac962be" />
 
+## How to Run Simulation (ModelSim/QuestaSim)
+This project includes automated TCL scripts for quick compilation and simulation setup.
 
+run.do: ModelSim DO script for automated compilation and simulation.
+
+wave.do: ModelSim DO script to load the saved waveform formatting.
+
+1. Open **ModelSim** or **QuestaSim**.
+2. In the Transcript window, navigate to the project directory:
+   ```tcl
+   cd /path/to/your/project
 
