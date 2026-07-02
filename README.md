@@ -1,11 +1,12 @@
 # UART Communication System Implementation
 
-## 📝 Overview
-A complete Universal Asynchronous Receiver/Transmitter (UART) system designed and implemented from scratch using Verilog. This RTL module enables reliable full-duplex serial communication[cite: 3]. The system is highly configurable, supporting dynamic parity generation/checking and multiple oversampling rates to ensure robust data recovery.
+## Overview
+A complete Universal Asynchronous Receiver/Transmitter (UART) system designed and implemented from scratch using Verilog. This RTL module enables reliable full-duplex serial communication. 
+The system is highly configurable, supporting dynamic parity generation/checking and multiple oversampling rates to ensure robust data recovery.
 
 <img width="951" height="577" alt="{9148940D-82CA-43A0-8AAC-42F448919FF0}" src="https://github.com/user-attachments/assets/da74f3e3-fcc4-46ac-b27f-d743b6f2102e" />
 
-## ✨ Key Features
+## Key Features
 * **Full-Duplex Communication:** Simultaneous transmission and reception of 8-bit data frames.
 * <img width="916" height="167" alt="{BD61ADFC-2D96-4FB6-91FD-A82346887D64}" src="https://github.com/user-attachments/assets/38a725cc-cf3f-46b8-9177-5537f24dc966" />
 
@@ -18,7 +19,7 @@ A complete Universal Asynchronous Receiver/Transmitter (UART) system designed an
 * **Error Detection:** Built-in error flags for Parity Mismatch (`Parity_Error`) and Framing/Stop Bit Error (`Stop_Error`).
 * **Synchronous Design:** Fully synchronous architecture utilizing asynchronous active-low reset for proper initialization.
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### 1. UART Top Module
 The top-level module integrates both the Transmitter and Receiver to provide a seamless full-duplex interface.
